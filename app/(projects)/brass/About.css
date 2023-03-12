@@ -1,0 +1,29 @@
+.brass-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+
+    height: auto;
+    padding-bottom: 20px;
+}
+
+.brass-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.brass-logo {
+    width: 220px;
+    height: 220px;
+    border: 7px double #838383;
+    margin-top: 20px;
+}
+
+.brass-description {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #b4b4b4;
+}

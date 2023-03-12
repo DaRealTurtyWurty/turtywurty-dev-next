@@ -1,0 +1,139 @@
+:root {
+    --nav-bg-color: #333344;
+    --nav-font-color: #dddddd;
+}
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    padding: 5px 20px 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--nav-bg-color);
+}
+
+.navbar > .navbar-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar > .navbar-brand > .navbar-icon {
+    width: 50px;
+    height: auto;
+}
+
+.navbar > .navbar-brand > .navbar-title {
+    color: var(--nav-font-color);
+    font-weight: bold;
+    font-size: 25pt;
+    cursor: default;
+}
+
+.navbar > .navbar-right > .navbar-links {
+    display: none;
+    color: var(--nav-font-color);
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+.navbar-hamburger {
+    position: relative;
+    height: 26px;
+    width: 32px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.navbar-hamburger .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+}
+
+.navbar-hamburger .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.navbar-hamburger .line2 {
+    transition: transform 0.2s ease-in-out;
+}
+
+.navbar-hamburger .line3 {
+    transform-origin: 0 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.navbar-popout {
+    background-color: rgba(67, 118, 130, 0.87);
+    position: fixed;
+    height: 100%;
+    z-index: 3;
+    width: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transition: width 1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    box-shadow: #090918 -2px 0 10px;
+}
+
+.navbar-popout.open {
+    display: block;
+    width: 75%;
+}
+
+.navbar-popout > ul {
+    margin-top: 75px;
+    text-align: center;
+}
+
+.navbar-popout > ul > li {
+    list-style-type: none;
+    color: #00000000;
+    text-shadow: #090918 1px 1px 10px;
+    font-size: 20pt;
+    padding-bottom: 20px;
+    transition: color 1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.navbar-popout.open > ul > li {
+    color: #fff;
+}
+
+.navbar-popout > ul .current {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 700px) {
+    .navbar > .navbar-right > .navbar-links {
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .navbar > .navbar-right > .navbar-links > li {
+        cursor: pointer;
+    }
+
+    .navbar > .navbar-right > .navbar-links .current {
+        text-decoration: underline;
+        cursor: default;
+    }
+
+    .navbar-hamburger,
+    .navbar-hamburger > .line {
+        display: none;
+    }
+}

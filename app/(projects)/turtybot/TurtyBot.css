@@ -1,0 +1,48 @@
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    gap: 5px;
+}
+
+.about-profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #dedede;
+    margin-top: 45px;
+}
+
+.about-description {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #dedede;
+    width: 100%;
+}
+
+.button-holder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+}
+
+.button-holder button {
+    padding: 10px;
+    width: 150px;
+    background-color: #65b1c4;
+    color: #f3f3f3;
+    font-weight: bold;
+    font-size: 16pt;
+    border-radius: 10px;
+    border: 2px solid #1c4a57;
+}
+
+.button-holder button:hover {
+    background-color: #2f8198;
+    color: #bcbcbc;
+}
+

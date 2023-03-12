@@ -1,0 +1,43 @@
+.pokemon-browser {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+
+    width: 100%;
+    padding: 1rem;
+}
+
+.pokemon-browser-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+
+    color: #eee;
+    text-align: center;
+    text-shadow: 0 5px 10px black;
+}
+
+.pokemon-browser-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    text-decoration: none;
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.pokemon-browser-list-item {
+    width: 100%;
+    padding: 3rem;
+    border-radius: 15px;
+    background-color: #bbb;
+    box-shadow: 0 5px 5px #222;
+}

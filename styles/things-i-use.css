@@ -1,0 +1,67 @@
+.things-i-use {
+    position: relative;
+    height: 150px;
+    z-index: 2;
+    margin-top: -10px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.down-arrow {
+    width: 75px;
+    height: 75px;
+    transform: revert;
+    transition: transform 0.3s ease-in-out;
+}
+
+.down-arrow.open {
+    transform: rotate(180deg);
+}
+
+.things-i-use > h1 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.7em;
+}
+
+.things-i-use-container {
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+}
+
+.things-i-use-container.hidden {
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+.things-i-use-container.dont-display:not(.hidden) {
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+.things-i-use-container.hidden.dont-display {
+    display: none;
+}
+
+@media screen and (min-width: 600px) {
+    .things-i-use {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .things-i-use > h1 {
+        font-size: 2em;
+    }
+
+    .down-arrow {
+        width: 100px;
+        height: 100px;
+    }
+}

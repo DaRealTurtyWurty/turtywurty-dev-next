@@ -1,0 +1,29 @@
+.railroad-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+}
+
+.section-title {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.section-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    object-fit: contain;
+    padding: 0 30px;
+}
+
+.section-description {
+    text-align: center;
+    color: #989898;
+    padding-right: 40px;
+    padding-left: 40px;
+}

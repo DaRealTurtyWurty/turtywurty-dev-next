@@ -1,0 +1,62 @@
+.railroad-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+
+    height: auto;
+    padding-bottom: 20px;
+}
+
+.railroad-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.railroad-logo {
+    width: 220px;
+    height: 220px;
+    border-radius: 25%;
+    border: 7px double #838383;
+    margin-top: 20px;
+}
+
+.railroad-description {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #b4b4b4;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.railroad-button {
+    padding: 10px;
+    width: auto;
+    background-color: #65b1c4;
+    color: #f3f3f3;
+    font-weight: bold;
+    font-size: 16pt;
+    border-radius: 10px;
+    border: 2px solid #1c4a57;
+}
+
+.railroad-button:hover {
+    background-color: #2f8198;
+    color: #bcbcbc;
+}
+
+.railroad-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    padding: 20px;
+    border-radius: 5px;
+}

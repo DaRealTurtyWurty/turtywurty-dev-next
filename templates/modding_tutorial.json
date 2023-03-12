@@ -1,0 +1,151 @@
+{
+  "title": "Template Tutorial",
+  "description": "This is a template tutorial",
+  "createdAt": "2022-12-22",
+  "tags": [
+    "template",
+    "tutorial"
+  ],
+  "author": "TurtyWurty",
+  "content": [
+    {
+      "type": "paragraph",
+      "content": "This is a paragraph"
+    },
+    {
+      "type": "code",
+      "content": "console.log(\"This is a code block\");",
+      "language": "javascript"
+    },
+    {
+      "type": "image",
+      "content": "https://i.imgur.com/1Z5Q1Z5.png"
+    },
+    {
+      "type": "paragraph",
+      "content": "This is another paragraph"
+    },
+    {
+      "type": "heading2",
+      "content": "This is a heading"
+    },
+    {
+      "type": "heading3",
+      "content": "This is a subheading"
+    },
+    {
+      "type": "line-break"
+    },
+    {
+      "type": "list",
+      "content": [
+        {
+          "type": "string",
+          "content": "This is a list item",
+          "id": "list-item-0"
+        },
+        {
+          "type": "string",
+          "content": "This is another list item",
+          "id": "list-item-1"
+        }
+      ],
+      "ordered": false
+    },
+    {
+      "type": "quote",
+      "content": "This is a quote"
+    },
+    {
+      "type": "link",
+      "content": "https://google.com"
+    },
+    {
+      "type": "table",
+      "content": [
+        {
+          "type": "table-row",
+          "content": [
+            {
+              "type": "table-cell",
+              "content": "This is a table cell",
+              "id": "cell-0"
+            },
+            {
+              "type": "table-cell",
+              "content": "This is another table cell",
+              "id": "cell-1"
+            }
+          ],
+          "id": "row-0"
+        },
+        {
+          "type": "table-row",
+          "content": [
+            {
+              "type": "table-cell",
+              "content": "This is a table cell",
+              "id": "cell-2"
+            },
+            {
+              "type": "table-cell",
+              "content": "This is another table cell",
+              "id": "cell-3"
+            }
+          ],
+          "id": "row-1"
+        }
+      ]
+    },
+    {
+      "type": "warning",
+      "content": "This is a warning"
+    },
+    {
+      "type": "information",
+      "content": "This is an information"
+    },
+    {
+      "type": "success",
+      "content": "This is a success"
+    },
+    {
+      "type": "error",
+      "content": "This is an error"
+    },
+    {
+      "type": "spoiler",
+      "content": "This is a spoiler"
+    },
+    {
+      "type": "embed",
+      "content": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    },
+    {
+      "type": "math",
+      "content": "x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}"
+    },
+    {
+      "type": "video",
+      "content": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "type": "audio",
+      "content": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "type": "download",
+      "content": "../modding_tutorial.json"
+    },
+    {
+      "type": "line-separator"
+    },
+    {
+      "type": "paragraph",
+      "content": "This is another paragraph",
+      "style": {
+        "textAlign": "center"
+      }
+    }
+  ]
+}

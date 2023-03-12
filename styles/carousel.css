@@ -1,0 +1,59 @@
+* {
+    transition: all .3s ease-in-out;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-content {
+    position: relative;
+    width: 100%;
+}
+
+.carousel-arrow {
+    position: absolute;
+    z-index: 5;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.carousel-arrow.left {
+    left: 25px;
+    transform: rotate(90deg);
+}
+
+.carousel-arrow.right {
+    right: 25px;
+    transform: rotate(-90deg);
+}
+
+.carousel-item {
+    opacity: 0;
+    transition: 1s ease;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1.08);
+}
+
+@media screen and (min-width: 950px) {
+    .carousel-arrow {
+        width: 75px;
+        height: 75px;
+    }
+
+    .carousel-arrow.left {
+        left: 50px;
+    }
+
+    .carousel-arrow.right {
+        right: 50px;
+    }
+}

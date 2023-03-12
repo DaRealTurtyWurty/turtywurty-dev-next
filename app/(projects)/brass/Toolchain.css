@@ -1,0 +1,40 @@
+.toolchain-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ededed;
+    height: auto;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+.toolchain-name {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 36pt;
+    font-weight: bold;
+}
+
+.toolchain-description {
+    text-align: center;
+    font-size: 12pt;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    margin-top: -15px;
+    padding-top: 0;
+}
+
+.toolchain-href:visited {
+    color: #65b1c4;
+}
+
+.toolchain-href {
+    color: #65b1c4;
+    font-weight: bold;
+}
+
+.toolchain-href:hover {
+    text-decoration: underline;
+}

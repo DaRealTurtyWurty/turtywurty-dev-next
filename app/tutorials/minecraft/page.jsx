@@ -37,25 +37,23 @@ export default async function Page() {
         <header>
             <h1>Minecraft Tutorials</h1>
         </header>
-        <section>
-            <div className="version-group">
-                {
-                    versions.map(version => {
-                        return <div key={version} className="tutorial-group">
-                            <h2>{version}</h2>
-                            <ul>
-                                {
-                                    tutorials.map(tutorial => {
-                                        return <li key={tutorial}>
-                                            <Link href={`/tutorials/minecraft/${version}/${tutorial}`} />
-                                        </li>
-                                    })
-                                }
-                            </ul>
-                        </div>
-                    })
-                }
-            </div>
+        <section className="version-group">
+            {
+                versions.map(version => {
+                    return <div key={version} className="tutorial-group">
+                        <h2>{version}</h2>
+                        <ul>
+                            {
+                                tutorialForVersion[version].map(tutorial => {
+                                    return <Link href={`/tutorials/minecraft/${version}/${tutorial}`}><li key={tutorial} className="tutorial-item">
+                                        {tutorial.replace(".json", "")}
+                                    </li></Link>
+                                })
+                            }
+                        </ul>
+                    </div>
+                })
+            }
         </section>
     </main>
 }

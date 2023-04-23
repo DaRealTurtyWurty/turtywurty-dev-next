@@ -7,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Navbar() {
-    require("../styles/navbar.css");
+    require("@/styles/navbar.css");
 
     function handleHamburger() {
         let popout = document.querySelector(".navbar-popout");

@@ -1,0 +1,159 @@
+main {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--section-color);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+    width: 90%;
+}
+
+.form-group fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.form-group legend {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.form-group label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.title-area, .description-area, .tag-area, .author-area  {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tag-area ul {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    width: 100%;
+    min-height: 50px;
+
+    border: 2px solid var(--background-color);
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag-area .tag {
+    padding: 0.5rem;
+    width: fit-content;
+
+    border-radius: 5px;
+    background-color: var(--background-color);
+    border: 2px solid #1a1a27;
+    color: white;
+    box-shadow: 2px 2px 5px black;
+
+    list-style: none;
+}
+
+.form-control {
+    resize: none;
+}
+
+input, textarea {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+
+    border-radius: 5px;
+    background-color: var(--background-color);
+    border: 2px solid #1a1a27;
+    color: white;
+}
+
+.content-list {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.content-list li {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-content-button {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+    background-color: var(--background-color);
+    border: 2px solid #1a1a27;
+    color: white;
+
+    cursor: pointer;
+}
+
+.add-content-button:hover {
+    background-color: #1a1a27;
+}
+
+.tutorial-content-item {
+    width: 100%;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    background-color: #3f3f4d;
+    border-radius: 5px;
+}
+
+.tutorial-content-item * {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.tutorial-content-item textarea {
+    resize: none;
+}

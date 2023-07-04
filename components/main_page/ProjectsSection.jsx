@@ -3,7 +3,6 @@ import ProjectItem from "./ProjectItem";
 import turtywurtyDev from "@/assets/me.png";
 import turtybot from "@/assets/turtybot.png";
 import railroadIDE from "@/assets/railroad-ide.png";
-import turtysChemistry from "@/assets/turtys-chemistry.png";
 import slipperyMod from "@/assets/slippery-mod.png";
 import peasMod from "@/assets/peas-mod.png";
 import betterSponges from "@/assets/better-sponges.png";
@@ -11,17 +10,18 @@ import todoList from "@/assets/todo-list.png";
 import nvidiaHighlightMover from "@/assets/nvidia.svg";
 import ancientology from "@/assets/ancientology.png";
 import brass from "@/assets/brass.png";
+import industria from "@/assets/industria.png";
 
 const projects = [
     {
         name: "turtywurty.dev",
-        description: "This website - built with ReactJS and pure CSS.",
+        description: "This website - built with NextJS.",
         url: "/",
         image: turtywurtyDev
     },
     {
         name: "TurtyBot",
-        description: "A multiple purpose Discord bot using JDA.",
+        description: "A multipurpose Discord bot using JDA.",
         url: "/turtybot",
         image: turtybot
     },
@@ -72,6 +72,12 @@ const projects = [
         description: "A Mod Loader and API for Minecraft.",
         url: "/brass",
         image: brass
+    },
+    {
+        name: "Industria",
+        description: "A Minecraft tech-chem mod that adds a bunch of machines related to chemical processing.",
+        url: "/industria",
+        image: industria
     }
 ]
 

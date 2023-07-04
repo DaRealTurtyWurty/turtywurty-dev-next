@@ -1,6 +1,7 @@
 "use client";
 
 import {useState} from "react";
+import CreateTutorialContentItem from "@/app/tutorials/minecraft/creator/CreateTutorialContentItem";
 import TutorialContentItem from "@/app/tutorials/minecraft/creator/TutorialContentItem";
 
 export default function Page() {
@@ -32,7 +33,7 @@ export default function Page() {
 
                     <div className="title-area">
                         <label htmlFor="title">Title</label>
-                        <input type="text" className="form-control" id="title" onChange={e => setTitle(e.target.value)} />
+                        <input type="text" className="form-control" id="title" data-lpignore onChange={e => setTitle(e.target.value)} />
                     </div>
 
                     <div className="description-area">
@@ -42,7 +43,7 @@ export default function Page() {
 
                     <div className="tag-area">
                         <label htmlFor="tags">Tags</label>
-                        <input type="text" className="form-control" id="tags" onInput={onTagInput} onLoad={() => setTags([])} />
+                        <input type="text" className="form-control" id="tags" data-lpignore onInput={onTagInput} onLoad={() => setTags([])} />
                         <ul className="tag-list">
                             {
                                 tags.map(tag => <li key={tag} className="tag">{tag}</li>)
@@ -52,9 +53,9 @@ export default function Page() {
 
                     <div className="author-area">
                         <label htmlFor="author">Author Name</label>
-                        <input type="text" className="form-control" id="author-name" onChange={e => setAuthor(prev => JSON.stringify({...prev, name: e.target.value}))} />
+                        <input type="text" className="form-control" id="author-name" data-lpignore onChange={e => setAuthor(prev => JSON.stringify({...prev, name: e.target.value}))} />
                         <label htmlFor="author">Author UUID</label>
-                        <input type="text" className="form-control" id="author-uuid" onChange={e => setAuthor(prev => JSON.stringify({...prev, uuid: e.target.value}))} />
+                        <input type="text" className="form-control" id="author-uuid" data-lpignore onChange={e => setAuthor(prev => JSON.stringify({...prev, uuid: e.target.value}))} />
                     </div>
                 </fieldset>
 
@@ -64,7 +65,19 @@ export default function Page() {
                     <ul className="content-list">
                         {
                             content.map((item, index) => {
-                                return (
+                                return index === content.length - 1 ? (
+                                    <li key={index}>
+                                        <CreateTutorialContentItem item={item} onTypeChange={function (type) {
+                                            item.type = type;
+                                        }} onContentChange={function (content) {
+                                            item.content = content;
+                                        }} onStyleChange={function (style) {
+                                            item.style = style;
+                                        }} onOtherDataChange={function (data, what) {
+
+                                        }} />
+                                    </li>
+                                ) : (
                                     <li key={index}>
                                         <TutorialContentItem item={item} />
                                     </li>

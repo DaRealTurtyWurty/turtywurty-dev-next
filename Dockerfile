@@ -15,14 +15,13 @@ RUN \
   else echo "Lockfile not found." && exit 1; \
   fi \
 
-RUN ls -la -R
-
 
 # Rebuild the source code only when needed
 FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+RUN ls -la -R
 
 # Next.js collects completely anonymous telemetry data about general usage.
 # Learn more here: https://nextjs.org/telemetry

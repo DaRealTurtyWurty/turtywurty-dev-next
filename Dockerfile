@@ -15,7 +15,7 @@ RUN ls -la /app
 COPY . .
 
 # Build the app
-RUN npm build
+RUN npm run build
 
 # Expose port 3000
 EXPOSE 3000

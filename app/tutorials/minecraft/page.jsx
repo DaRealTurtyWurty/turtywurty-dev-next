@@ -45,7 +45,7 @@ export default async function Page() {
                         <ul>
                             {
                                 tutorialForVersion[version].map(tutorial => {
-                                    return <Link href={`/tutorials/minecraft/${version}/${tutorial}`}><li key={tutorial} className="tutorial-item">
+                                    return <Link href={`/tutorials/minecraft/${version}/${tutorial}`} key={tutorial}><li className="tutorial-item">
                                         {tutorial.replace(".json", "")}
                                     </li></Link>
                                 })

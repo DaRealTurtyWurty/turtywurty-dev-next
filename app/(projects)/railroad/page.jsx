@@ -87,7 +87,7 @@ export default function Page() {
             <AboutSection/>
             <Carousel content=
                           {data.map(item => (
-                              <DefaultRailroadSection
+                              <DefaultRailroadSection key={item.title}
                                   {...item}
                               />
                           ))}

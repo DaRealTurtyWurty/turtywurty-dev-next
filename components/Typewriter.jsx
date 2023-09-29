@@ -34,7 +34,7 @@ export default function Typewriter(props) {
                 setReversed(shouldReverse);
             }
         }, 1000);
-    }, []);
+    });
 
     React.useEffect(() => {
         if (!isReverse) {
@@ -42,7 +42,7 @@ export default function Typewriter(props) {
         } else {
             setTypedPhrase(oldPhrase => oldPhrase.slice(0, typingIndex + 1));
         }
-    }, []);
+    });
 
     return <strong className="typed-content">{typedPhrase}</strong>
 }

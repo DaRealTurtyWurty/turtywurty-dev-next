@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const dynamicParams = true;
 
 import {cloneElement} from "react";
@@ -46,7 +48,7 @@ export default async function Page({ params }) {
                 </div>
                 <div className="author-container">
                     <p>Author:</p>
-                    <img className="author-profile" src={`https://crafatar.com/avatars/${content.author.uuid}?size=32&overlay=true`} alt="" />
+                    <Image className="author-profile" src={`https://crafatar.com/avatars/${content.author.uuid}?size=32&overlay=true`} alt="" />
                     <p>{content.author.name}</p>
                 </div>
             </header>
@@ -102,7 +104,7 @@ function deserializeItem(item) {
                 />;
             }
         case "image":
-            return <img src={item.content} alt={item.alt || ""} title={item.alt || ""} style={style}/>;
+            return <Image src={item.content} alt={item.alt || ""} title={item.alt || ""} style={style}/>;
         case "heading2":
             return <h2 style={style}>{replaceMarkdown(item.content)}</h2>;
         case "heading3":

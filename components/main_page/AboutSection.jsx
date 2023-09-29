@@ -59,7 +59,7 @@ export default function AboutSection() {
             <div className="top">
                 <Image src={meImage} className="me-image" alt="" />
                 <div className="about-description">
-                    <h1 className="about-title">Hi, I'm TurtyWurty!👋</h1>
+                    <h1 className="about-title">Hi, I&apos;m TurtyWurty!👋</h1>
                     <p className="about-intro"><strong className="typewritten">{text}</strong><Cursor cursorStyle="_"/>
                     </p>
                     <p>I am <strong>{age} year old</strong> from the UK <Image src={ukFlag} width={35} alt=""/>, who started

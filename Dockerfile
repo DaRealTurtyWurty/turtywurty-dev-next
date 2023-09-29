@@ -1,29 +1,20 @@
-FROM node:18-alpine AS base
-FROM base AS deps
-RUN apk add --no-cache libc6-compat
+FROM node:18-alpine
+
 WORKDIR /app
 
-COPY package.json package-lock.json ./
-RUN npm ci
+# Copy package.json and package-lock.json to the container
+COPY package*.json ./
 
-FROM base AS builder
-WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
-COPY . .
-RUN npm run build
+# Install app dependencies
+RUN npm install
 
-FROM base AS runner
-WORKDIR /app
-ENV NODE_ENV production
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
+# Debug: Display the contents of the /app directory to check if files are copied correctly
+RUN ls -la /app
 
-COPY --from=builder /app/public ./public
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+# Debug: Run a simple command to test if Node.js is functioning correctly
+RUN node --version
 
-USER nextjs
-EXPOSE 3000
-ENV PORT 3000
+# Debug: Check if npm is working
+RUN npm --version
 
-CMD ["node", "server.js"]
+# End of Dockerfile

@@ -15,10 +15,10 @@ RUN ls -la /app
 COPY . .
 
 # Build the app
-RUN npm run build
+RUN npm build
 
 # Expose port 3000
 EXPOSE 3000
 
 # Run the app
-CMD ["npm", "run", "start"]
+CMD ["npm", "start"]

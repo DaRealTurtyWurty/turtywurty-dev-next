@@ -11,10 +11,14 @@ RUN npm install
 # Debug: Display the contents of the /app directory to check if files are copied correctly
 RUN ls -la /app
 
-# Debug: Run a simple command to test if Node.js is functioning correctly
-RUN node --version
+# Copy the rest of the files to the container
+COPY . .
 
-# Debug: Check if npm is working
-RUN npm --version
+# Build the app
+RUN npm run build
 
-# End of Dockerfile
+# Expose port 3000
+EXPOSE 3000
+
+# Run the app
+CMD ["npm", "run", "start"]

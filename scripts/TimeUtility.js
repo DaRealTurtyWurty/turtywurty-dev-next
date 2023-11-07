@@ -1,11 +1,5 @@
-import {log} from "next/dist/server/typescript/utils";
-
 export function dateDifference(date0, date1) {
-    let timeDiff = date0.valueOf() - date1.valueOf();
-    let milliInDay = 24 * 60 * 60 * 1000;
-    let noOfDays = timeDiff / milliInDay;
-    let daysInYear = 365.242;
-    return Math.round(noOfDays / daysInYear);
+    return date0.getFullYear() - date1.getFullYear();
 }
 
 export function secondsToMillis(seconds) {

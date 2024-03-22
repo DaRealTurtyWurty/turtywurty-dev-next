@@ -10,6 +10,18 @@ const nextConfig = {
         "hostname": "avatars.githubusercontent.com",
         "port": '',
         "pathname": "**"
+      },
+      {
+        "protocol": "https",
+        "hostname": "crafatar.com",
+        "port": '',
+        "pathname": "**"
+      },
+      {
+        "protocol": "https",
+        "hostname": "i.imgur.com",
+        "port": '',
+        "pathname": "**"
       }
     ]
   },

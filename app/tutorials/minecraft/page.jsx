@@ -13,14 +13,16 @@ const getVersions = async () => {
 }
 
 const getTutorials = async (version) => {
-    console.log(version)
     let content = await octokit.request("GET /repos/{owner}/{repo}/contents/{path}", {
         owner: "DaRealTurtyWurty",
         repo: "Minecraft-Tutorials",
         path: version
     });
 
-    return await content.data.filter(content => content.type !== "dir").map(content => content.name);
+    return await content.data
+        .filter(content => content.type !== "dir")
+        .filter(content => content.name.endsWith(".json"))
+        .map(content => content.name.replace(".json", ""));
 }
 
 export default async function Page() {

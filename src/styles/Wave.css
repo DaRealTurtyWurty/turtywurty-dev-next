@@ -1,0 +1,29 @@
+/* First wave animation */
+.wave-group-1 {
+    animation: wave1 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+}
+
+.wave-group-2 {
+    animation: wave2 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite;
+}
+
+@keyframes wave1 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-1600px);
+    }
+}
+
+@keyframes wave2 {
+    0% {
+        transform: translate(0,0);
+    }
+    100% {
+        transform: translate(-1600px, 0);
+    }
+    50% {
+        transform: translate(-800px, 50px);
+    }
+}

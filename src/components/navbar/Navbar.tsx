@@ -6,6 +6,7 @@ import Image from "next/image";
 import MobileNavbarLinks from "@/components/navbar/MobileNavbarLinks";
 import DesktopNavbarLinks from "@/components/navbar/DesktopNavbarLinks";
 import HamburgerButton from "@/components/navbar/HamburgerButton";
+import {ThemeToggle} from "@/components/navbar/ThemeToggle";
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,7 +30,8 @@ export default function Navbar() {
                     <DesktopNavbarLinks/>
 
                     {/* Mobile menu button */}
-                    <div className="md:hidden flex items-center">
+                    <div className="md:hidden flex items-center space-x-2">
+                        <ThemeToggle />
                         <HamburgerButton isOpen={isMenuOpen} onClick={() => setIsMenuOpen(!isMenuOpen)}/>
                     </div>
                 </div>

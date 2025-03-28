@@ -1,3 +1,5 @@
+import {Button} from "@/shadcn/components/ui/button";
+
 interface HamburgerButtonProps {
     isOpen: boolean;
     onClick: () => void;
@@ -5,9 +7,10 @@ interface HamburgerButtonProps {
 
 export default function HamburgerButton({ isOpen, onClick }: HamburgerButtonProps) {
     return (
-        <button
+        <Button
             onClick={onClick}
-            className="inline-flex items-center justify-center p-2 rounded-md text-foreground/90 hover:text-foreground cursor-pointer"
+            className="inline-flex items-center justify-center p-2 rounded-md"
+            variant="outline"
             aria-label="Toggle menu">
             <div className="relative w-5 h-5 flex items-center justify-center">
                 <span
@@ -23,6 +26,6 @@ export default function HamburgerButton({ isOpen, onClick }: HamburgerButtonProp
                         isOpen ? '-rotate-45 translate-y-0' : 'translate-y-1.5'
                     }`}/>
             </div>
-        </button>
+        </Button>
     );
 }

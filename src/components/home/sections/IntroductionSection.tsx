@@ -4,8 +4,8 @@ import useYearsSince from "@/hooks/YearsSince";
 import Image from "next/image";
 import Wave from "@/components/home/Wave";
 import Typewriter from "@/components/Typewriter";
-import MinecraftSkinRenderer from "@/components/home/MinecraftSkinRenderer";
 import PlayerViewer from "@/components/home/MinecraftSkinRenderer";
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/shadcn/components/ui/tooltip";
 
 function aOrAn(number: number): string {
     const vowelSounds = new Set([
@@ -20,18 +20,36 @@ function aOrAn(number: number): string {
     return `a ${number}`;
 }
 
+function formatDateWithSuffix(date: Date): string {
+    const day = date.getDate();
+    const month = date.toLocaleString('default', { month: 'short' });
+    const year = date.getFullYear();
+
+    const suffix = (day: number) => {
+        if (day > 3 && day < 21) return 'th';
+        switch (day % 10) {
+            case 1: return 'st';
+            case 2: return 'nd';
+            case 3: return 'rd';
+            default: return 'th';
+        }
+    };
+
+    return `${day}${suffix(day)} ${month} ${year}`;
+}
+
 export default function IntroductionSection() {
     const [age] = useYearsSince(new Date(2004, 1, 7));
-    const [startedProgramming] = useYearsSince(new Date(2018, 1, 7));
+    const [startedProgramming] = useYearsSince(new Date(2018, 6, 1));
 
-    const birthDate = new Date(2004, 1, 7).toLocaleDateString();
-    const programmingStartDate = new Date(2018, 1, 7).toLocaleDateString();
+    const birthDate = formatDateWithSuffix(new Date(2004, 1, 7));
+    const programmingStartDate = formatDateWithSuffix(new Date(2018, 6, 1));
 
     return <>
         <section
             className="relative flex flex-col items-center justify-center space-y-4 md:space-y-8 dark:bg-section-background p-8 shadow-lg pb-[218px]">
             <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
-                <PlayerViewer uuid="7cc8f27e-072d-4c87-bfb6-ab547c5b9ca0" cape="/images/cape.png" />
+                <PlayerViewer uuid="7cc8f27e-072d-4c87-bfb6-ab547c5b9ca0" cape="/images/cherry_blossom_cape.png" />
                 <div className="flex flex-col justify-center space-y-2 text-center md:text-left">
                     <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold">Hi, I&#39;m TurtyWurty! 👋</h1>
                     <Typewriter options={{
@@ -60,10 +78,29 @@ export default function IntroductionSection() {
                         pauseTime: 2000
                     }}/>
                     <p className="text-lg md:text-xl lg:text-2xl">
-                        I am <span className="font-bold" title={birthDate}>{aOrAn(age)} year old</span> from the UK <Image
-                        src="/images/uk_flag.svg" alt="" width={35} height={18} className="inline"/>,
-                        who started programming <span className="font-bold"
-                                                      title={programmingStartDate}>{startedProgramming} years ago</span>.
+                        I am
+                        <TooltipProvider>
+                            <Tooltip>
+                                <TooltipTrigger>
+                                    <span className="font-bold">&nbsp;{aOrAn(age)} year old&nbsp;</span>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                    <p className="text-sm">{birthDate}</p>
+                                </TooltipContent>
+                            </Tooltip>
+                        </TooltipProvider>
+                        from the UK <Image src="/images/uk_flag.svg" alt="" width={35} height={18} className="inline mr-1"/>,
+                        who started programming
+                        <TooltipProvider>
+                            <Tooltip>
+                                <TooltipTrigger>
+                                    <span className="font-bold">&nbsp;{aOrAn(startedProgramming)} years ago&nbsp;</span>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                    <p className="text-sm">Approximately ~{programmingStartDate}</p>
+                                </TooltipContent>
+                            </Tooltip>
+                        </TooltipProvider>
                     </p>
                 </div>
             </div>

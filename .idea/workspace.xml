@@ -5,166 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ffe225c-f640-466c-9c74-1da910865b67" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Typewriter.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/home/MinecraftSkinRenderer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/home/Wave.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/home/sections/IntroductionSection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navbar/DesktopNavbarLinks.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navbar/HamburgerButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navbar/MobileNavbarLinks.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navbar/Navbar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/YearsSince.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/Wave.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/turtywurty-dev-ssr.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/turtywurty-dev.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(fun)/pokemon-browser/Pagination.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(fun)/pokemon-browser/PokemonList.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(fun)/pokemon-browser/PokemonList.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(fun)/pokemon-browser/page.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(projects)/brass/About.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(projects)/brass/AboutSection.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(projects)/brass/BradleSection.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(projects)/brass/BrassAPISection.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(projects)/brass/BrassLoaderSection.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(projects)/brass/Toolchain.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(projects)/brass/ToolchainSection.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(projects)/brass/page.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(projects)/railroad/About.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(projects)/railroad/AboutSection.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(projects)/railroad/Contributors.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(projects)/railroad/ContributorsSection.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(projects)/railroad/DefaultRailroadSection.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(projects)/railroad/RailroadSection.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(projects)/railroad/page.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(projects)/turtybot/AboutSection.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(projects)/turtybot/DefaultTurtyBotSection.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(projects)/turtybot/TurtyBot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(projects)/turtybot/TurtyBotSection.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(projects)/turtybot/page.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(utility)/calculator/Calculator.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(utility)/calculator/page.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(utility)/color-picker/ColorPicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(utility)/color-picker/page.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(utility)/currency-convertor/CurrencyConvertor.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(utility)/currency-convertor/page.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tutorials/ReactCodeBlocks.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tutorials/ReactSpoiler.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tutorials/minecraft/MinecraftTutorialList.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tutorials/minecraft/[version]/[tutorial]/DeserializeItem.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tutorials/minecraft/[version]/[tutorial]/MinecraftTutorial.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tutorials/minecraft/[version]/[tutorial]/MinecraftTutorialContent.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tutorials/minecraft/[version]/[tutorial]/page.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tutorials/minecraft/creator/CreateTutorialContentItem.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tutorials/minecraft/creator/TutorialContentItem.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tutorials/minecraft/creator/TutorialCreator.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tutorials/minecraft/creator/page.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tutorials/minecraft/page.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/ancientology.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/apache_commons.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/atom.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/better-sponges.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/blender.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/brass.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/c-sharp.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/discordjs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/down-arrow.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/eclipse.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/github_desktop.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/gradle.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/gson.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/industria.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/intellij.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/java.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/javafx.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/javascript.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/jda.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/lua.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/lwjgl.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/me.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft_forge.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/mongodb.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nodejs.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nsfw/turtybot-nsfw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nvidia.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/peas-mod.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photoshop.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/python.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/python_turtle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/railroad-ide.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/railroad-image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/railroad-supported-frameworks.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/reactjs.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/rider.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/roblox_studio.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/slippery-mod.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/tkinter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/todo-list.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/turtybot-advice.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/turtybot-fun.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/turtybot-images.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/turtybot-levelling.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/turtybot-meme.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/turtybot-moderation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/turtybot-music.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/turtybot-polls.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/turtybot-suggestions.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/turtybot-utility.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/turtybot-warning.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/turtybot-warnings.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/turtybot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/uk_flag.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/unity.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/visual_studio.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/vscode.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/wave.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/webstorm.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/wip.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Carousel.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MathExpression.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/NSFWImage.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navbar.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ToggleButton.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Typewriter.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Warning.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/main_page/AboutSection.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/main_page/FrameworkItem.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/main_page/FrameworksSection.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/main_page/LanguageItem.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/main_page/LanguagesSection.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/main_page/ProjectItem.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/main_page/ProjectsSection.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/main_page/SoftwareItem.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/main_page/SoftwareSection.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/main_page/ThingsIUseSection.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/main_page/Wave.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/Picker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/StringUtility.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/TimeUtility.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/about.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/carousel.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/frameworks.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/languages.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/navbar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/projects.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/software.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/things-i-use.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/wave.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/modding_tutorial.json" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/navbar/ThemeToggle.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/providers/theme-provider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/cape.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/cherry_blossom_cape.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/MinecraftSkinRenderer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/MinecraftSkinRenderer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/sections/IntroductionSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/sections/IntroductionSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/DesktopNavbarLinks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/DesktopNavbarLinks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/HamburgerButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/HamburgerButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/MobileNavbarLinks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/MobileNavbarLinks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/Navbar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,6 +53,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;rewrite&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -206,12 +61,15 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;ts.external.directory.path&quot;: &quot;E:\\Programming\\Web\\turtywurty-dev\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Programming\Web\turtywurty-dev\src\shadcn\components" />
+      <recent name="E:\Programming\Web\turtywurty-dev\src\shadcn" />
       <recent name="E:\Programming\Web\turtywurty-dev\src\styles" />
       <recent name="E:\Programming\Web\turtywurty-dev\public\images" />
       <recent name="E:\Programming\Web\turtywurty-dev\src\components\navbar" />
@@ -240,7 +98,11 @@
       <workItem from="1743112024554" duration="8916000" />
       <workItem from="1743162330917" duration="5431000" />
       <workItem from="1743170484476" duration="63000" />
-      <workItem from="1743170559277" duration="1126000" />
+      <workItem from="1743170559277" duration="1197000" />
+      <workItem from="1743190697455" duration="112000" />
+      <workItem from="1743190952947" duration="4388000" />
+      <workItem from="1743201899664" duration="72000" />
+      <workItem from="1743201989181" duration="1242000" />
     </task>
     <servers />
   </component>

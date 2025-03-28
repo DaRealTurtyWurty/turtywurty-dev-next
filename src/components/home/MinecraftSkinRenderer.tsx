@@ -11,8 +11,8 @@ export default function PlayerViewer({ uuid, cape }: { uuid: string, cape?: stri
 
         const viewer = new SkinViewer({
             canvas: canvasRef.current,
-            width: 192,
-            height: 192,
+            width: 256,
+            height: 256,
             skin: `https://skinmc.net/api/v1/renders/skins/${uuid}/skin`,
             cape,
             enableControls: false,

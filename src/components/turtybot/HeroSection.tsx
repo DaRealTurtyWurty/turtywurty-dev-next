@@ -43,7 +43,7 @@ export default function HeroSection() {
             <div className="flex gap-4">
                 <Link href="https://discord.com" passHref>
                     <Button
-                        className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-colors shadow-md dark:bg-blue-700 dark:hover:bg-blue-800">
+                        className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-colors shadow-md dark:bg-blue-700 dark:hover:bg-blue-800 cursor-pointer">
                         <Image src="/images/discord_icon.svg" alt="Discord Logo" width={20} height={20}
                                className="dark:invert"/>
                         Invite Bot
@@ -51,7 +51,7 @@ export default function HeroSection() {
                 </Link>
                 <Link href="https://github.com/DaRealTurtyWurty/SuperTurtyBot" passHref>
                     <Button
-                        className="flex items-center gap-2 bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-md font-medium transition-colors shadow-md dark:bg-gray-700 dark:hover:bg-gray-800">
+                        className="flex items-center gap-2 bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-md font-medium transition-colors shadow-md dark:bg-gray-700 dark:hover:bg-gray-800 cursor-pointer">
                         <Image src="/images/github_icon.svg" alt="GitHub Logo" width={20} height={20}
                                className="dark:invert"/>
                         View Source

@@ -126,3 +126,102 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes shooting-star-left {
+  0% { transform: translate(-50%, 0) scale(0.72) rotate(0deg); opacity: 0; }
+  12% { opacity: 1; }
+  55% { transform: translate(-86px, -38px) scale(0.9) rotate(-16deg); opacity: 1; }
+  100% { transform: translate(-138px, -6px) scale(1) rotate(-24deg); opacity: 0; }
+}
+
+@keyframes shooting-star-center {
+  0% { transform: translate(-50%, 0) scale(0.72) rotate(0deg); opacity: 0; }
+  12% { opacity: 1; }
+  55% { transform: translate(-14px, -66px) scale(0.9) rotate(-4deg); opacity: 1; }
+  100% { transform: translate(18px, -118px) scale(1) rotate(8deg); opacity: 0; }
+}
+
+@keyframes shooting-star-right {
+  0% { transform: translate(-50%, 0) scale(0.72) rotate(0deg); opacity: 0; }
+  12% { opacity: 1; }
+  55% { transform: translate(70px, -42px) scale(0.9) rotate(14deg); opacity: 1; }
+  100% { transform: translate(124px, 2px) scale(1) rotate(24deg); opacity: 0; }
+}
+
+@keyframes shooting-star-trail-left {
+  0% { transform: translate(-50%, 0) scaleX(0.25) rotate(0deg); opacity: 0; }
+  18% { opacity: 0.85; }
+  55% { transform: translate(-78px, -34px) scaleX(1.2) rotate(-16deg); opacity: 0.75; }
+  100% { transform: translate(-128px, -4px) scaleX(1.35) rotate(-24deg); opacity: 0; }
+}
+
+@keyframes shooting-star-trail-center {
+  0% { transform: translate(-50%, 0) scaleX(0.25) rotate(0deg); opacity: 0; }
+  18% { opacity: 0.85; }
+  55% { transform: translate(-12px, -60px) scaleX(1.25) rotate(-4deg); opacity: 0.72; }
+  100% { transform: translate(14px, -108px) scaleX(1.4) rotate(8deg); opacity: 0; }
+}
+
+@keyframes shooting-star-trail-right {
+  0% { transform: translate(-50%, 0) scaleX(0.25) rotate(0deg); opacity: 0; }
+  18% { opacity: 0.85; }
+  55% { transform: translate(64px, -38px) scaleX(1.2) rotate(14deg); opacity: 0.74; }
+  100% { transform: translate(116px, 0) scaleX(1.35) rotate(24deg); opacity: 0; }
+}
+
+@keyframes coffee-wisp-1 {
+  0% { transform: translate(0, 0) scale(0.92); opacity: 0; }
+  25% { opacity: 0.7; }
+  100% { transform: translate(-4px, -10px) scale(1.06); opacity: 0; }
+}
+
+@keyframes coffee-wisp-2 {
+  0% { transform: translate(0, 0) scale(0.92); opacity: 0; }
+  25% { opacity: 0.72; }
+  100% { transform: translate(2px, -11px) scale(1.08); opacity: 0; }
+}
+
+@keyframes coffee-wisp-3 {
+  0% { transform: translate(0, 0) scale(0.9); opacity: 0; }
+  25% { opacity: 0.66; }
+  100% { transform: translate(5px, -9px) scale(1.04); opacity: 0; }
+}
+
+@keyframes commit-line-pulse {
+  0% { opacity: 0; }
+  20% { opacity: 0.75; }
+  100% { opacity: 0.2; }
+}
+
+@keyframes commit-node-pulse {
+  0% { opacity: 0; transform: scale(0.4); }
+  30% { opacity: 1; transform: scale(1.25); }
+  100% { opacity: 0; transform: scale(1); }
+}
+
+@keyframes contributors-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.playlist-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--foreground) 45%, transparent) transparent;
+}
+
+.playlist-scrollbar::-webkit-scrollbar {
+  height: 8px;
+}
+
+.playlist-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.playlist-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--foreground) 35%, transparent);
+}
+
+.playlist-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--foreground) 55%, transparent);
+}

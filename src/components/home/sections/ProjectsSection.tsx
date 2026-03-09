@@ -34,7 +34,8 @@ const PROJECTS: Project[] = [{
     description: "This website! Built with modern web technologies.",
     technologies: ["TypeScript", "React", "Next.js", "Tailwind CSS"],
     isWip: true,
-    githubUrl: "https://github.com/DaRealTurtyWurty/turtywurty-dev-next"
+    githubUrl: "https://github.com/DaRealTurtyWurty/turtywurty-dev-next",
+    customUrl: "https://turtywurty.dev/"
 }, {
     id: "pepolang",
     name: "PepoLang",

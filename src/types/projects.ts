@@ -8,4 +8,5 @@ export interface Project {
     isOutdated?: boolean;
     unreleased?: boolean;
     githubUrl: string;
+    customUrl?: string;
 }

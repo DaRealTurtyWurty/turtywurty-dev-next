@@ -1,10 +1,18 @@
 import FeatureCard, {TagType} from "@/components/turtybot/FeatureCard";
 import FooterCTA from "@/components/turtybot/FooterCTA";
+import GitHubStatsGrid from "@/components/GitHubStatsGrid";
+import GitHubContributorsCarousel from "@/components/GitHubContributorsCarousel";
 import HeroSection from "@/components/turtybot/HeroSection";
 
 export default function TurtyBotPage() {
     return <div className="container mx-auto p-4 max-w-7xl">
         <HeroSection/>
+        <GitHubStatsGrid
+            owner="DaRealTurtyWurty"
+            repo="SuperTurtyBot"
+            enabledStats={["totalCommits", "openIssues", "lastUpdated", "stars", "languages"]}
+        />
+        <GitHubContributorsCarousel owner="DaRealTurtyWurty" repo="SuperTurtyBot" />
         <h2 className="text-3xl font-bold mb-8 text-center">Commands</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             <FeatureCard
@@ -26,13 +34,6 @@ export default function TurtyBotPage() {
                 title="Utility"
                 description="Helpful commands to manage your server and provide information."
                 tags={["/quote", "/periodic-table", "/weather", "/wikipedia", "/curseforge", "/embed", "/fact", "/github", "/highlight", "/latest", "/minecraft", "/poll", "/r6status", "/reminder", "/roblox", "/roles", "/steam", "/strawpoll", "/strawpollresults", "/topic"]}
-                tagType={TagType.Command}
-            />
-            <FeatureCard
-                images={["/images/turtybot/music/play.png", "/images/turtybot/music/pause.png", "/images/turtybot/music/skip.png", "/images/turtybot/music/queue.png"]}
-                title="Music"
-                description="Play and manage music in your Discord voice channels."
-                tags={["/play", "/pause", "/skip", "/queue", "/clearqueue", "/joinvc", "/leavecleanup", "/leavevc", "/loop", "/lyrics", "/move", "/musicrestart", "/nowplaying", "/removedupes", "/removequeue", "/resume", "/savesong", "/search", "/seek", "/shuffle", "/volume", "/voteskip"]}
                 tagType={TagType.Command}
             />
             <FeatureCard
@@ -104,6 +105,6 @@ export default function TurtyBotPage() {
                 description="Track and reward user activity with an engaging level system."
             />
         </div>
-        <FooterCTA />
+        <FooterCTA/>
     </div>;
 }

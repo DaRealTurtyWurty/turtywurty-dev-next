@@ -1,20 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { Project } from "@/types/projects";
+import {Project} from "@/types/projects";
 import ImageWithBackup from "@/components/ImageWithBackup";
 import React from "react";
-import { Button } from "@/shadcn/components/ui/button";
+import {Button} from "@/shadcn/components/ui/button";
 import Image from "next/image";
 
 interface ProjectCardProps {
     project: Project;
 }
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({project}: ProjectCardProps) {
     return (
         <Link
-            href={`/projects/${project.id}`}
+            href={project.customUrl ?? `/projects/${project.id}`}
             className="block bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
         >
             <div className="p-6 flex flex-col h-full">
@@ -31,17 +31,20 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                     <div className="flex flex-wrap items-center">
                         <h3 className="text-xl font-semibold">{project.name}</h3>
                         {project.isWip && (
-                            <ProjectBadge textColor="text-amber-200" darkTextColor="text-amber-800" backgroundColor="bg-amber-900" darkBackgroundColor="bg-amber-100">
+                            <ProjectBadge textColor="text-amber-200" darkTextColor="text-amber-800"
+                                          backgroundColor="bg-amber-900" darkBackgroundColor="bg-amber-100">
                                 WIP
                             </ProjectBadge>
                         )}
                         {project.unreleased && (
-                            <ProjectBadge textColor="text-blue-800" darkTextColor="text-blue-200" backgroundColor="bg-blue-100" darkBackgroundColor="bg-blue-900">
+                            <ProjectBadge textColor="text-blue-800" darkTextColor="text-blue-200"
+                                          backgroundColor="bg-blue-100" darkBackgroundColor="bg-blue-900">
                                 Unreleased
                             </ProjectBadge>
                         )}
                         {project.isOutdated && (
-                            <ProjectBadge textColor="text-red-200" darkTextColor="text-red-800" backgroundColor="bg-red-900" darkBackgroundColor="bg-red-100">
+                            <ProjectBadge textColor="text-red-200" darkTextColor="text-red-800"
+                                          backgroundColor="bg-red-900" darkBackgroundColor="bg-red-100">
                                 Outdated
                             </ProjectBadge>
                         )}
@@ -74,7 +77,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                             }
                         }}
                     >
-                        <Image src="/images/github_icon.svg" alt="GitHub" width={20} height={20} />
+                        <Image src="/images/github_icon.svg" alt="GitHub" width={20} height={20}/>
                         GitHub
                     </span>
                 </Button>

@@ -22,16 +22,20 @@ function aOrAn(number: number): string {
 
 function formatDateWithSuffix(date: Date): string {
     const day = date.getDate();
-    const month = date.toLocaleString('default', { month: 'short' });
+    const month = date.toLocaleString('default', {month: 'short'});
     const year = date.getFullYear();
 
     const suffix = (day: number) => {
         if (day > 3 && day < 21) return 'th';
         switch (day % 10) {
-            case 1: return 'st';
-            case 2: return 'nd';
-            case 3: return 'rd';
-            default: return 'th';
+            case 1:
+                return 'st';
+            case 2:
+                return 'nd';
+            case 3:
+                return 'rd';
+            default:
+                return 'th';
         }
     };
 
@@ -49,7 +53,7 @@ export default function IntroductionSection() {
         <section
             className="relative flex flex-col items-center justify-center space-y-4 md:space-y-8 dark:bg-section-background p-8 shadow-lg pb-[218px]">
             <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
-                <PlayerViewer uuid="7cc8f27e-072d-4c87-bfb6-ab547c5b9ca0" cape="/images/cherry_blossom_cape.png" />
+                <PlayerViewer uuid="6af8072798b84b3a8dda29bf30a837b5"/>
                 <div className="flex flex-col justify-center space-y-2 text-center md:text-left">
                     <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold">Hi, I&#39;m TurtyWurty! 👋</h1>
                     <Typewriter options={{
@@ -89,7 +93,8 @@ export default function IntroductionSection() {
                                 </TooltipContent>
                             </Tooltip>
                         </TooltipProvider>
-                        from the UK <Image src="/images/uk_flag.svg" alt="" width={35} height={18} className="inline mr-1"/>,
+                        from the UK <Image src="/images/uk_flag.svg" alt="" width={35} height={18}
+                                           className="inline mr-1"/>,
                         who started programming
                         <TooltipProvider>
                             <Tooltip>

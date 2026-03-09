@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ffe225c-f640-466c-9c74-1da910865b67" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/projects/railroad/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/projects/railroad/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/cherry_blossom_cape.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/MinecraftSkinRenderer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/MinecraftSkinRenderer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/sections/IntroductionSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/sections/IntroductionSection.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +147,7 @@
       <workItem from="1773010226672" duration="5424000" />
       <workItem from="1773061107421" duration="5144000" />
       <workItem from="1773075868431" duration="38000" />
-      <workItem from="1773075917682" duration="1678000" />
+      <workItem from="1773075917682" duration="3651000" />
     </task>
     <servers />
   </component>

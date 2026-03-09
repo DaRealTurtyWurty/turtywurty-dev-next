@@ -3,7 +3,7 @@
 import React, { useEffect } from "react";
 import {SkinViewer, WalkingAnimation} from "skinview3d";
 
-export default function PlayerViewer({ uuid, cape }: { uuid: string, cape?: string }) {
+export default function PlayerViewer({ uuid }: { uuid: string }) {
     const canvasRef = React.useRef<HTMLCanvasElement>(null)
 
     useEffect(() => {
@@ -13,8 +13,8 @@ export default function PlayerViewer({ uuid, cape }: { uuid: string, cape?: stri
             canvas: canvasRef.current,
             width: 256,
             height: 256,
-            skin: `https://skinmc.net/api/v1/renders/skins/${uuid}/skin`,
-            cape,
+            skin: `https://skinmc.net/api/v1/skins/uuid/${uuid}`,
+            cape: `https://skinmc.net/api/v1/cape/${uuid}`,
             enableControls: false,
             animation: new WalkingAnimation(),
             zoom: 1
@@ -24,7 +24,7 @@ export default function PlayerViewer({ uuid, cape }: { uuid: string, cape?: stri
         viewer.autoRotate = true;
         viewer.playerObject.translateY(-10);
         
-    }, [canvasRef, cape, uuid])
+    }, [canvasRef, uuid])
 
     return <canvas ref={canvasRef} className="rounded-full border-6 md:border-8 border-[#325660] dark:border-[#65b1c4]"/>
 }

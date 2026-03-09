@@ -5,30 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ffe225c-f640-466c-9c74-1da910865b67" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/discord_icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/github_icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/projects/industria/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/projects/turtybot/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ImageWithBackup.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ProjectCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/home/sections/ProjectsSection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/turtybot/CollapsibleTagList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/turtybot/FeatureCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/turtybot/FooterCTA.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/turtybot/GalleryImageDisplay.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/turtybot/HeroSection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/projects.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/projects/railroad/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/projects/railroad/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_E:/Programming/Web/turtywurty-dev" value="2urh0aQwXjhakJFD8yG0larQYqo" />
+    </persistenceIdMap>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -59,31 +48,51 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;rewrite&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.tslint&quot;,
+    &quot;npm.Next.js: server-side.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;ts.external.directory.path&quot;: &quot;E:\\Programming\\Web\\turtywurty-dev\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Programming\Web\turtywurty-dev\src\shadcn\components\ui" />
       <recent name="E:\Programming\Web\turtywurty-dev\src\components\turtybot" />
       <recent name="E:\Programming\Web\turtywurty-dev\public\images\turtybot\fun" />
       <recent name="E:\Programming\Web\turtywurty-dev\public\images\turtybot\utility" />
       <recent name="E:\Programming\Web\turtywurty-dev\public\images\turtybot\music" />
-      <recent name="E:\Programming\Web\turtywurty-dev\public\images\turtybot\levelling" />
     </key>
+  </component>
+  <component name="RunManager" selected="npm.Next.js: server-side">
+    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="Next.js: server-side" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.19416.2" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.31033.133" />
       </set>
     </attachedChunks>
   </component>
@@ -120,10 +129,36 @@
       <workItem from="1743882782389" duration="5449000" />
       <workItem from="1743939847150" duration="4291000" />
       <workItem from="1743964330165" duration="3049000" />
+      <workItem from="1754592415641" duration="3655000" />
+      <workItem from="1754596635601" duration="11000" />
+      <workItem from="1761589154216" duration="82000" />
+      <workItem from="1761589319687" duration="4445000" />
+      <workItem from="1765632208297" duration="25000" />
+      <workItem from="1767909628429" duration="343000" />
+      <workItem from="1768518297291" duration="58000" />
+      <workItem from="1768518417347" duration="85000" />
+      <workItem from="1768518773222" duration="1857000" />
+      <workItem from="1768694798725" duration="20000" />
+      <workItem from="1772809620228" duration="3745000" />
+      <workItem from="1772820036237" duration="1474000" />
+      <workItem from="1772995600324" duration="5851000" />
+      <workItem from="1773009047776" duration="782000" />
+      <workItem from="1773010226672" duration="5424000" />
+      <workItem from="1773061107421" duration="5144000" />
+      <workItem from="1773075868431" duration="38000" />
+      <workItem from="1773075917682" duration="1678000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>

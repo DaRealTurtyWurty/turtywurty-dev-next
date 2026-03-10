@@ -13,8 +13,8 @@ export default function PlayerViewer({ uuid }: { uuid: string }) {
             canvas: canvasRef.current,
             width: 256,
             height: 256,
-            skin: `https://skinmc.net/api/v1/skins/uuid/${uuid}`,
-            cape: `https://skinmc.net/api/v1/cape/${uuid}`,
+            skin: `/api/skinmc/skins/uuid/${uuid}`,
+            cape: `/api/skinmc/cape/${uuid}`,
             enableControls: false,
             animation: new WalkingAnimation(),
             zoom: 1

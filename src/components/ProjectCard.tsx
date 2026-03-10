@@ -25,6 +25,7 @@ export default function ProjectCard({project}: ProjectCardProps) {
                             alt={`${project.name} logo`}
                             backupsrc="https://placehold.co/256@3x.png?text=N%2FA"
                             fill
+                            sizes="48px"
                             className="object-contain rounded-md transition-transform duration-300 transform hover:scale-105 shadow-md dark:shadow-lg"
                         />
                     </div>

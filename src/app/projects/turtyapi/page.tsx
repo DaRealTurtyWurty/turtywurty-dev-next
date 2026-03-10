@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import GitHubStatsGrid from "@/components/GitHubStatsGrid";
-import GitHubContributorsCarousel from "@/components/GitHubContributorsCarousel";
 import {Button} from "@/shadcn/components/ui/button";
 
 const TECH_STACK = ["Java", "Gradle", "Javalin", "REST API"];

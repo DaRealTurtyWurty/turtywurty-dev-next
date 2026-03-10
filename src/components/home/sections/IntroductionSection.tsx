@@ -42,6 +42,10 @@ function formatDateWithSuffix(date: Date): string {
     return `${day}${suffix(day)} ${month} ${year}`;
 }
 
+function formatYearsAgo(years: number): string {
+    return `${years} year${years === 1 ? "" : "s"} ago`;
+}
+
 export default function IntroductionSection() {
     const [age] = useYearsSince(new Date(2004, 1, 7));
     const [startedProgramming] = useYearsSince(new Date(2018, 6, 1));
@@ -99,7 +103,7 @@ export default function IntroductionSection() {
                         <TooltipProvider>
                             <Tooltip>
                                 <TooltipTrigger>
-                                    <span className="font-bold">&nbsp;{aOrAn(startedProgramming)} years ago&nbsp;</span>
+                                    <span className="font-bold">&nbsp;{formatYearsAgo(startedProgramming)}&nbsp;</span>
                                 </TooltipTrigger>
                                 <TooltipContent>
                                     <p className="text-sm">Approximately ~{programmingStartDate}</p>

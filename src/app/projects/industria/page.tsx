@@ -3,7 +3,9 @@ import Image from "next/image";
 import GitHubStatsGrid from "@/components/GitHubStatsGrid";
 import GitHubContributorsCarousel from "@/components/GitHubContributorsCarousel";
 import YouTubePlaylistCarousel from "@/components/YouTubePlaylistCarousel";
-import {Button} from "@/shadcn/components/ui/button";
+import MinecraftModPlatformStats from "@/components/MinecraftModPlatformStats";
+import {GitHubIssuesButton, GitHubRepositoryButton} from "@/components/GitHubLinkButtons";
+import MarketplaceLinkButton from "@/components/MarketplaceLinkButton";
 
 const TECH_STACK = ["Java", "Fabric", "Gradle", "Minecraft"];
 const INDUSTRIA_PLAYLIST_URL = "https://www.youtube.com/playlist?list=PLaevjqy3XufbR1PJM3b9P67vTjtbeOnv-";
@@ -143,53 +145,41 @@ export default async function IndustriaPage() {
                         ))}
                     </div>
                     <div className="flex flex-wrap gap-3">
-                        <Button asChild className="bg-white text-slate-800 hover:bg-white/90">
-                            <Link href="https://github.com/DaRealTurtyWurty/Industria" target="_blank" rel="noopener noreferrer">
-                                <span className="inline-flex items-center gap-2">
-                                    <Image src="/images/github_icon.svg" alt="" aria-hidden="true" width={16} height={16}/>
-                                    View Repository
-                                </span>
-                            </Link>
-                        </Button>
-                        <Button asChild variant="secondary" className="bg-black/25 text-white hover:bg-black/35">
-                            <Link
-                                href="https://github.com/DaRealTurtyWurty/Industria/issues"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <span className="inline-flex items-center gap-2">
-                                    <IssueIcon/>
-                                    Open Issues
-                                </span>
-                            </Link>
-                        </Button>
-                        <Button asChild variant="secondary" className="bg-black/25 text-white hover:bg-black/35">
-                            <Link
-                                href="https://modrinth.com/project/industriamod"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <span className="inline-flex items-center gap-2">
-                                    <Image src="/images/modrinth_icon.svg" alt="" aria-hidden="true" width={16} height={16}/>
-                                    View on Modrinth
-                                </span>
-                            </Link>
-                        </Button>
-                        <Button asChild variant="secondary" className="bg-black/25 text-white hover:bg-black/35">
-                            <Link
-                                href="https://www.curseforge.com/minecraft/mc-mods/industriamod"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <span className="inline-flex items-center gap-2">
-                                    <Image src="/images/curseforge_icon.svg" alt="" aria-hidden="true" width={16} height={16}/>
-                                    View on CurseForge
-                                </span>
-                            </Link>
-                        </Button>
+                        <GitHubRepositoryButton
+                            href="https://github.com/DaRealTurtyWurty/Industria"
+                            className="bg-white text-slate-800 hover:bg-white/90"
+                        />
+                        <GitHubIssuesButton
+                            href="https://github.com/DaRealTurtyWurty/Industria/issues"
+                            className="bg-black/25 text-white hover:bg-black/35"
+                            icon={<IssueIcon/>}
+                        />
+                        <MarketplaceLinkButton
+                            platform="modrinth"
+                            href="https://modrinth.com/project/industriamod"
+                            className="bg-black/25 text-white hover:bg-black/35"
+                        />
+                        <MarketplaceLinkButton
+                            platform="curseforge"
+                            href="https://www.curseforge.com/minecraft/mc-mods/industriamod"
+                            className="bg-black/25 text-white hover:bg-black/35"
+                        />
                     </div>
                 </div>
             </section>
+
+            <MinecraftModPlatformStats
+                title="Downloads & Version Support"
+                description="Marketplace reach and supported Minecraft versions across the available platforms."
+                modrinth={{
+                    projectId: "industriamod",
+                    url: "https://modrinth.com/project/industriamod",
+                }}
+                curseForge={{
+                    slug: "industriamod",
+                    url: "https://www.curseforge.com/minecraft/mc-mods/industriamod",
+                }}
+            />
 
             <GitHubStatsGrid
                 owner="DaRealTurtyWurty"
@@ -197,6 +187,7 @@ export default async function IndustriaPage() {
                 title="Repository Stats"
                 enabledStats={["totalCommits", "openIssues", "lastUpdated", "stars", "languages"]}
             />
+
             <GitHubContributorsCarousel owner="DaRealTurtyWurty" repo="Industria"/>
 
             <YouTubePlaylistCarousel

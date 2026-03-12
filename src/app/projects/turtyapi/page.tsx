@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import GitHubStatsGrid from "@/components/GitHubStatsGrid";
-import {Button} from "@/shadcn/components/ui/button";
+import {GitHubIssuesButton, GitHubRepositoryButton} from "@/components/GitHubLinkButtons";
 
 const TECH_STACK = ["Java", "Gradle", "Javalin", "REST API"];
 
@@ -80,19 +80,14 @@ export default function TurtyAPIPage() {
                     </div>
 
                     <div className="flex flex-wrap gap-3">
-                        <Button asChild className="bg-emerald-100 text-emerald-900 hover:bg-emerald-50">
-                            <Link href="https://github.com/DaRealTurtyWurty/TurtyAPI" target="_blank" rel="noopener noreferrer">
-                                <span className="inline-flex items-center gap-2">
-                                    <Image src="/images/github_icon.svg" alt="" aria-hidden="true" width={16} height={16}/>
-                                    View Repository
-                                </span>
-                            </Link>
-                        </Button>
-                        <Button asChild variant="secondary" className="bg-emerald-950/35 text-emerald-50 hover:bg-emerald-950/50">
-                            <Link href="https://github.com/DaRealTurtyWurty/TurtyAPI/issues" target="_blank" rel="noopener noreferrer">
-                                Open Issues
-                            </Link>
-                        </Button>
+                        <GitHubRepositoryButton
+                            href="https://github.com/DaRealTurtyWurty/TurtyAPI"
+                            className="bg-emerald-100 text-emerald-900 hover:bg-emerald-50"
+                        />
+                        <GitHubIssuesButton
+                            href="https://github.com/DaRealTurtyWurty/TurtyAPI/issues"
+                            className="bg-emerald-950/35 text-emerald-50 hover:bg-emerald-950/50"
+                        />
                     </div>
                 </div>
             </section>

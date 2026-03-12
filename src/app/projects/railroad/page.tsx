@@ -4,6 +4,7 @@ import GitHubStatsGrid from "@/components/GitHubStatsGrid";
 import GitHubContributorsCarousel from "@/components/GitHubContributorsCarousel";
 import GitHubOrgProjectsSection from "@/components/GitHubOrgProjectsSection";
 import GitHubProjectSection from "@/components/GitHubProjectSection";
+import {GitHubRepositoryButton} from "@/components/GitHubLinkButtons";
 import YouTubePlaylistCarousel from "@/components/YouTubePlaylistCarousel";
 import {Button} from "@/shadcn/components/ui/button";
 
@@ -86,14 +87,10 @@ export default function RailroadPage() {
                     </div>
 
                     <div className="flex flex-wrap gap-3">
-                        <Button asChild className="bg-cyan-100 text-cyan-900 hover:bg-cyan-50">
-                            <Link href="https://github.com/Railroad-Team/Railroad" target="_blank" rel="noopener noreferrer">
-                                <span className="inline-flex items-center gap-2">
-                                    <Image src="/images/github_icon.svg" alt="" aria-hidden="true" width={16} height={16}/>
-                                    View Repository
-                                </span>
-                            </Link>
-                        </Button>
+                        <GitHubRepositoryButton
+                            href="https://github.com/Railroad-Team/Railroad"
+                            className="bg-cyan-100 text-cyan-900 hover:bg-cyan-50"
+                        />
                         <Button asChild variant="secondary" className="bg-cyan-950/35 text-cyan-50 hover:bg-cyan-950/50">
                             <Link href="https://railroadide.dev/" target="_blank" rel="noopener noreferrer">
                                 Visit Website

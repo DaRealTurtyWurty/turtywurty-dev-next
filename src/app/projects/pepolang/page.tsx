@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import GitHubStatsGrid from "@/components/GitHubStatsGrid";
-import {Button} from "@/shadcn/components/ui/button";
+import {GitHubIssuesButton, GitHubRepositoryButton} from "@/components/GitHubLinkButtons";
 
 const LANGUAGE_REQUIREMENTS = [
     "No whitespace/indentation requirements.",
@@ -131,19 +131,14 @@ export default function PepoLangPage() {
                         <p>&gt; delivery: working interpreter pipeline</p>
                     </div>
                     <div className="flex flex-wrap gap-3">
-                        <Button asChild className="bg-emerald-500 text-zinc-900 hover:bg-emerald-400">
-                            <Link href="https://github.com/DaRealTurtyWurty/PepoLang" target="_blank" rel="noopener noreferrer">
-                                <span className="inline-flex items-center gap-2">
-                                    <Image src="/images/github_icon.svg" alt="" aria-hidden="true" width={16} height={16}/>
-                                    View Repository
-                                </span>
-                            </Link>
-                        </Button>
-                        <Button asChild variant="secondary" className="bg-white/12 text-white hover:bg-white/20">
-                            <Link href="https://github.com/DaRealTurtyWurty/PepoLang/issues" target="_blank" rel="noopener noreferrer">
-                                Open Issues
-                            </Link>
-                        </Button>
+                        <GitHubRepositoryButton
+                            href="https://github.com/DaRealTurtyWurty/PepoLang"
+                            className="bg-emerald-500 text-zinc-900 hover:bg-emerald-400"
+                        />
+                        <GitHubIssuesButton
+                            href="https://github.com/DaRealTurtyWurty/PepoLang/issues"
+                            className="bg-white/12 text-white hover:bg-white/20"
+                        />
                     </div>
                 </div>
             </section>

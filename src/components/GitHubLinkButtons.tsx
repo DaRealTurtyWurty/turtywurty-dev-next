@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 import {ReactNode} from "react";
 import {Button} from "@/shadcn/components/ui/button";
+import SimpleBrandIcon from "@/components/SimpleBrandIcon";
 
 type SharedButtonProps = {
     href: string;
@@ -24,7 +24,7 @@ export function GitHubRepositoryButton({
         <Button asChild variant={variant} className={className}>
             <Link href={href} target="_blank" rel="noopener noreferrer">
                 <span className="inline-flex items-center gap-2">
-                    <Image src="/images/github_icon.svg" alt="" aria-hidden="true" width={16} height={16}/>
+                    <SimpleBrandIcon brand="github"/>
                     {label}
                 </span>
             </Link>

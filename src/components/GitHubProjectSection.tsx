@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {Button} from "@/shadcn/components/ui/button";
 import {gql, GraphQLClient} from "graphql-request";
+import SimpleBrandIcon from "@/components/SimpleBrandIcon";
 
 type GitHubProjectSectionProps = {
     org: string;
@@ -260,7 +261,7 @@ export default async function GitHubProjectSection({
                                         className="bg-cyan-700 hover:bg-cyan-800 text-white shadow-lg shadow-cyan-900/20">
                                     <Link href={projectUrl} target="_blank" rel="noopener noreferrer">
                                         <span className="inline-flex items-center gap-2">
-                                            <Image src="/images/github_icon.svg" alt="" width={20} height={20}/>
+                                            <SimpleBrandIcon brand="github" className="h-5 w-5"/>
                                             Open Full Board
                                         </span>
                                     </Link>

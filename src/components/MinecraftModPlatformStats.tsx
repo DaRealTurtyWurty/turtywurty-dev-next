@@ -1,4 +1,4 @@
-import Image from "next/image";
+import {ReactNode} from "react";
 import {
     CurseForgeProjectConfig,
     getMinecraftModPlatformStats,
@@ -6,6 +6,7 @@ import {
     PlatformAvailability,
 } from "@/lib/minecraftModPlatformData";
 import MarketplaceLinkButton from "@/components/MarketplaceLinkButton";
+import SimpleBrandIcon from "@/components/SimpleBrandIcon";
 
 type MinecraftModPlatformStatsProps = {
     title?: string;
@@ -19,7 +20,7 @@ type PlatformStatCardProps = {
     label: string;
     value: string;
     helperText: string;
-    iconSrc?: string;
+    icon?: ReactNode;
     accentClassName: string;
     iconWrapperClassName: string;
 };
@@ -48,7 +49,7 @@ function PlatformStatCard({
     label,
     value,
     helperText,
-    iconSrc,
+    icon,
     accentClassName,
     iconWrapperClassName,
 }: PlatformStatCardProps) {
@@ -62,9 +63,9 @@ function PlatformStatCard({
                     <p className="mt-1 font-semibold text-lg sm:text-xl text-gray-900 dark:text-gray-100">{value}</p>
                     <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">{helperText}</p>
                 </div>
-                {iconSrc && (
+                {icon && (
                     <div className={`rounded-full p-2.5 ${iconWrapperClassName}`}>
-                        <Image src={iconSrc} alt="" aria-hidden="true" width={20} height={20}/>
+                        {icon}
                     </div>
                 )}
             </div>
@@ -142,7 +143,7 @@ export default async function MinecraftModPlatformStats({
                             label={`${stats.modrinth.label} Downloads`}
                             value={formatNumber(stats.modrinth.downloads)}
                             helperText={getPlatformHelperText(stats.modrinth.availability, stats.modrinth.versions.length)}
-                            iconSrc="/images/modrinth_icon.svg"
+                            icon={<SimpleBrandIcon brand="modrinth" className="h-5 w-5" colored/>}
                             accentClassName="border-emerald-200 dark:border-emerald-800"
                             iconWrapperClassName="bg-emerald-100 dark:bg-emerald-950/50"
                         />
@@ -152,7 +153,7 @@ export default async function MinecraftModPlatformStats({
                             label={`${stats.curseForge.label} Downloads`}
                             value={formatNumber(stats.curseForge.downloads)}
                             helperText={getPlatformHelperText(stats.curseForge.availability, stats.curseForge.versions.length)}
-                            iconSrc="/images/curseforge_icon.svg"
+                            icon={<SimpleBrandIcon brand="curseforge" className="h-5 w-5" colored/>}
                             accentClassName="border-orange-200 dark:border-orange-800"
                             iconWrapperClassName="bg-orange-100 dark:bg-orange-950/50"
                         />

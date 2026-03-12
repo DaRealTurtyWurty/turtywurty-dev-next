@@ -1,6 +1,6 @@
 import Link from "next/link";
 import {Button} from "@/shadcn/components/ui/button";
-import Image from "next/image";
+import SimpleBrandIcon from "@/components/SimpleBrandIcon";
 
 export default function FooterCTA() {
     return (
@@ -13,7 +13,7 @@ export default function FooterCTA() {
             <Link href="https://github.com/DaRealTurtyWurty/SuperTurtyBot" passHref>
                 <Button
                     className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-colors">
-                    <Image src="/images/github_icon.svg" alt="GitHub Logo" width={20} height={20}/>
+                    <SimpleBrandIcon brand="github" title="GitHub" className="h-5 w-5"/>
                     Follow Development
                 </Button>
             </Link>

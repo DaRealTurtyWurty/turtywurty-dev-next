@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import {Button} from "@/shadcn/components/ui/button";
+import SimpleBrandIcon from "@/components/SimpleBrandIcon";
 
 type MarketplacePlatform = "modrinth" | "curseforge";
 
@@ -12,13 +12,13 @@ type MarketplaceLinkButtonProps = {
     variant?: "default" | "secondary" | "outline" | "ghost" | "link";
 };
 
-const PLATFORM_CONFIG: Record<MarketplacePlatform, { iconSrc: string; defaultLabel: string }> = {
+const PLATFORM_CONFIG: Record<MarketplacePlatform, { iconBrand: MarketplacePlatform; defaultLabel: string }> = {
     modrinth: {
-        iconSrc: "/images/modrinth_icon.svg",
+        iconBrand: "modrinth",
         defaultLabel: "View on Modrinth",
     },
     curseforge: {
-        iconSrc: "/images/curseforge_icon.svg",
+        iconBrand: "curseforge",
         defaultLabel: "View on CurseForge",
     },
 };
@@ -36,7 +36,7 @@ export default function MarketplaceLinkButton({
         <Button asChild variant={variant} className={className}>
             <Link href={href} target="_blank" rel="noopener noreferrer">
                 <span className="inline-flex items-center gap-2">
-                    <Image src={config.iconSrc} alt="" aria-hidden="true" width={16} height={16}/>
+                    <SimpleBrandIcon brand={config.iconBrand} colored/>
                     {label ?? config.defaultLabel}
                 </span>
             </Link>

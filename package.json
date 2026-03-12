@@ -26,6 +26,7 @@
     "react-dom": "^19.0.0",
     "react-skinview3d": "^5.1.0",
     "shadcn": "^2.4.0-canary.17",
+    "simple-icons": "^16.11.0",
     "skinview3d": "^3.1.0",
     "tailwind-merge": "^3.0.2",
     "three": "^0.174.0",

@@ -4,6 +4,7 @@ export interface Project {
     logo: string;
     description: string;
     technologies: string[];
+    hasDetailPage?: boolean;
     isWip?: boolean;
     isOutdated?: boolean;
     unreleased?: boolean;

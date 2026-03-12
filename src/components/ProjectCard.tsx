@@ -5,7 +5,8 @@ import {Project} from "@/types/projects";
 import ImageWithBackup from "@/components/ImageWithBackup";
 import React from "react";
 import {Button} from "@/shadcn/components/ui/button";
-import Image from "next/image";
+import {getProjectHref} from "@/lib/projects";
+import SimpleBrandIcon from "@/components/SimpleBrandIcon";
 
 interface ProjectCardProps {
     project: Project;
@@ -14,7 +15,7 @@ interface ProjectCardProps {
 export default function ProjectCard({project}: ProjectCardProps) {
     return (
         <Link
-            href={project.customUrl ?? `/projects/${project.id}`}
+            href={getProjectHref(project)}
             className="block bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
         >
             <div className="p-6 flex flex-col h-full">
@@ -29,26 +30,28 @@ export default function ProjectCard({project}: ProjectCardProps) {
                             className="object-contain rounded-md transition-transform duration-300 transform hover:scale-105 shadow-md dark:shadow-lg"
                         />
                     </div>
-                    <div className="flex flex-wrap items-center">
+                    <div className="min-w-0 flex-1">
                         <h3 className="text-xl font-semibold">{project.name}</h3>
-                        {project.isWip && (
-                            <ProjectBadge textColor="text-amber-200" darkTextColor="text-amber-800"
-                                          backgroundColor="bg-amber-900" darkBackgroundColor="bg-amber-100">
-                                WIP
-                            </ProjectBadge>
-                        )}
-                        {project.unreleased && (
-                            <ProjectBadge textColor="text-blue-800" darkTextColor="text-blue-200"
-                                          backgroundColor="bg-blue-100" darkBackgroundColor="bg-blue-900">
-                                Unreleased
-                            </ProjectBadge>
-                        )}
-                        {project.isOutdated && (
-                            <ProjectBadge textColor="text-red-200" darkTextColor="text-red-800"
-                                          backgroundColor="bg-red-900" darkBackgroundColor="bg-red-100">
-                                Outdated
-                            </ProjectBadge>
-                        )}
+                        <div className="mt-2 flex flex-wrap gap-2">
+                            {project.isWip && (
+                                <ProjectBadge textColor="text-amber-200" darkTextColor="text-amber-800"
+                                              backgroundColor="bg-amber-900" darkBackgroundColor="bg-amber-100">
+                                    WIP
+                                </ProjectBadge>
+                            )}
+                            {project.unreleased && (
+                                <ProjectBadge textColor="text-blue-800" darkTextColor="text-blue-200"
+                                              backgroundColor="bg-blue-100" darkBackgroundColor="bg-blue-900">
+                                    Unreleased
+                                </ProjectBadge>
+                            )}
+                            {project.isOutdated && (
+                                <ProjectBadge textColor="text-red-200" darkTextColor="text-red-800"
+                                              backgroundColor="bg-red-900" darkBackgroundColor="bg-red-100">
+                                    Outdated
+                                </ProjectBadge>
+                            )}
+                        </div>
                     </div>
                 </div>
 
@@ -78,7 +81,7 @@ export default function ProjectCard({project}: ProjectCardProps) {
                             }
                         }}
                     >
-                        <Image src="/images/github_icon.svg" alt="GitHub" width={20} height={20}/>
+                        <SimpleBrandIcon brand="github" title="GitHub" className="h-5 w-5"/>
                         GitHub
                     </span>
                 </Button>
@@ -115,7 +118,7 @@ function ProjectBadge({
                       }: ProjectBadgeProps) {
     return (
         <span
-            className={`ml-2 px-2 py-0.5 text-xs font-medium rounded-full ${textColor} dark:${darkTextColor} ${backgroundColor} dark:${darkBackgroundColor}`}
+            className={`px-2 py-0.5 text-xs font-medium rounded-full ${textColor} dark:${darkTextColor} ${backgroundColor} dark:${darkBackgroundColor}`}
         >
             {children}
         </span>

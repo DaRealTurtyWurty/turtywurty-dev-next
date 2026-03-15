@@ -1,5 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
 import GitHubStatsGrid from "@/components/GitHubStatsGrid";
 import {GitHubIssuesButton, GitHubRepositoryButton} from "@/components/GitHubLinkButtons";
 import MinecraftModPlatformStats from "@/components/MinecraftModPlatformStats";

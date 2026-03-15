@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>V&A Museum Browser</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Victoria and Albert Museum Browser</h1>
+            <form id="search-form">
+                <label for="search-field" class="invisible">Search</label>
+                <input type="text" name="search" placeholder="Search" id="search-field">
+                <fieldset id="search-options">
+                    <label for="require-images-checkbox" id="require-images-label">Require images</label>
+                    <input type="checkbox" name="require-images" id="require-images-checkbox">
+                </fieldset>
+                <button type="submit" id="search-button">Search</button>
+            </form>
+        </header>
+        <section class="invisible" id="results">
+            <h2 id="results-heading">Results</h2>
+            <dialog id="details-dialog">
+                <div>
+                    <h3 id="details-heading"></h3>
+                    <img id="details-image" alt="Details image" src="">
+                    <div id="details-content"></div>
+                    <div id="details-buttons">
+                        <button id="details-link">More details</button>
+                        <button id="details-close">Close</button>
+                    </div>
+                </div>
+            </dialog>
+            <div id="results-list"></div>
+            <button id="load-more" class="invisible">Load more</button>
+        </section>
+        <footer>
+            <p>Victoria and Albert Museum Browser by Ryan [Redacted] &copy; 2024</p>
+        </footer>
+    </main>
+</body>
+</html>

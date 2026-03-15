@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import GitHubStatsGrid from "@/components/GitHubStatsGrid";
 import MinecraftModPlatformStats from "@/components/MinecraftModPlatformStats";
 import ImageWithBackup from "@/components/ImageWithBackup";

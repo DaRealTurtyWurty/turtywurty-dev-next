@@ -13,6 +13,13 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({project}: ProjectCardProps) {
+    const githubUrl = project.githubUrl;
+    const repositoryLinks = [
+        ...(githubUrl ? [{label: project.repositoryLinks?.length ? "Main Repo" : "GitHub", url: githubUrl}] : []),
+        ...(project.repositoryLinks ?? []),
+    ];
+    const hasRepositoryLinks = repositoryLinks.length > 0;
+
     return (
         <Link
             href={getProjectHref(project)}
@@ -59,34 +66,41 @@ export default function ProjectCard({project}: ProjectCardProps) {
                     {project.description}
                 </p>
 
-                <Button
-                    variant="outline"
-                    className="mt-auto w-full flex items-center justify-center gap-2"
-                    asChild
-                >
-                    <span
-                        onClick={(e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            window.open(project.githubUrl, "_blank", "noopener,noreferrer");
-                        }}
-                        className="flex items-center gap-2 cursor-pointer"
-                        role="button"
-                        tabIndex={0}
-                        onKeyDown={(e) => {
-                            if (e.key === "Enter" || e.key === " ") {
-                                e.preventDefault();
-                                e.stopPropagation();
-                                window.open(project.githubUrl, "_blank", "noopener,noreferrer");
-                            }
-                        }}
-                    >
-                        <SimpleBrandIcon brand="github" title="GitHub" className="h-5 w-5"/>
-                        GitHub
-                    </span>
-                </Button>
+                {hasRepositoryLinks && (
+                    <div className="mt-auto grid gap-2">
+                        {repositoryLinks.map((link) => (
+                            <Button
+                                key={link.url}
+                                variant="outline"
+                                className="w-full flex items-center justify-center gap-2"
+                                asChild
+                            >
+                                <span
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        e.stopPropagation();
+                                        window.open(link.url, "_blank", "noopener,noreferrer");
+                                    }}
+                                    className="flex items-center gap-2 cursor-pointer"
+                                    role="button"
+                                    tabIndex={0}
+                                    onKeyDown={(e) => {
+                                        if (e.key === "Enter" || e.key === " ") {
+                                            e.preventDefault();
+                                            e.stopPropagation();
+                                            window.open(link.url, "_blank", "noopener,noreferrer");
+                                        }
+                                    }}
+                                >
+                                    <SimpleBrandIcon brand="github" title="GitHub" className="h-5 w-5"/>
+                                    {link.label}
+                                </span>
+                            </Button>
+                        ))}
+                    </div>
+                )}
 
-                <div className="flex flex-wrap gap-2 mt-4">
+                <div className={`flex flex-wrap gap-2 ${hasRepositoryLinks ? "mt-4" : "mt-auto pt-4"}`}>
                     {project.technologies.map((tech) => (
                         <span
                             key={tech}

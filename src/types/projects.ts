@@ -1,3 +1,8 @@
+export interface ProjectRepositoryLink {
+    label: string;
+    url: string;
+}
+
 export interface Project {
     id: string;
     name: string;
@@ -8,6 +13,7 @@ export interface Project {
     isWip?: boolean;
     isOutdated?: boolean;
     unreleased?: boolean;
-    githubUrl: string;
+    githubUrl?: string;
+    repositoryLinks?: ProjectRepositoryLink[];
     customUrl?: string;
 }

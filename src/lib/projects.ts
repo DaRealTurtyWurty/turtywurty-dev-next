@@ -40,13 +40,13 @@ export const PROJECTS: Project[] = [{
     githubUrl: "https://github.com/DaRealTurtyWurty/turtywurty-dev-next",
     customUrl: "https://turtywurty.dev/",
 }, {
-    id: "pepolang",
-    name: "PepoLang",
-    logo: "/images/pepolang.png",
-    description: "A programming language made as a final-year university project.",
-    technologies: ["Java", "Gradle", "LLVM"],
+    id: "steam-shortcut-creator",
+    name: "Steam Shortcut Creator",
+    logo: "/images/steam-shortcut-creator.png",
+    description: "A Windows desktop app for creating and managing Steam shortcuts with a modern Windows 11-style interface.",
+    technologies: ["C#", "WPF", ".NET", "Inno Setup"],
     hasDetailPage: true,
-    githubUrl: "https://github.com/DaRealTurtyWurty/PepoLang",
+    githubUrl: "https://github.com/DaRealTurtyWurty/SteamShortcutCreator",
 }, {
     id: "turtyapi",
     name: "TurtyAPI",
@@ -133,7 +133,7 @@ export function getProjectHref(project: Project): string {
         return `/projects/${project.id}`;
     }
 
-    return project.githubUrl;
+    return project.githubUrl ?? "#";
 }
 
 export function isMinecraftProject(project: Project): boolean {

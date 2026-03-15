@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, {useEffect} from "react";
 import {SkinViewer, WalkingAnimation} from "skinview3d";
 
 export default function PlayerViewer({ uuid }: { uuid: string }) {

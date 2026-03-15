@@ -3,12 +3,7 @@ import Link from "next/link";
 import {Button} from "@/shadcn/components/ui/button";
 import SimpleBrandIcon from "@/components/SimpleBrandIcon";
 import ContactForm from "@/components/contact/ContactForm";
-import {
-    CONTACT_DISCORD_URL,
-    CONTACT_EMAIL_ADDRESS,
-    CONTACT_GITHUB_URL,
-    CONTACT_YOUTUBE_URL,
-} from "@/lib/contact";
+import {CONTACT_DISCORD_URL, CONTACT_EMAIL_ADDRESS, CONTACT_GITHUB_URL, CONTACT_YOUTUBE_URL,} from "@/lib/contact";
 
 export const metadata: Metadata = {
     title: "Contact | turtywurty.dev",

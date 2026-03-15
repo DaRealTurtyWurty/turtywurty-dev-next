@@ -1,12 +1,5 @@
 import {ComponentProps} from "react";
-import {
-    siCurseforge,
-    siDiscord,
-    siGithub,
-    siGmail,
-    siModrinth,
-    siYoutube,
-} from "simple-icons";
+import {siCurseforge, siDiscord, siGithub, siGmail, siModrinth, siYoutube,} from "simple-icons";
 
 type BrandName = "curseforge" | "discord" | "github" | "gmail" | "modrinth" | "youtube";
 

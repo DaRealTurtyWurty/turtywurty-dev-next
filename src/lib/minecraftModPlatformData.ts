@@ -1,5 +1,5 @@
 import {ModerinthApiError, ModrinthV2Client} from "@xmcl/modrinth";
-import {unstable_cache} from "next/cache";
+import {unstable_cache, unstable_noStore as noStore} from "next/cache";
 import Curseforge from "node-curseforge";
 
 export type ModrinthProjectConfig = {
@@ -78,6 +78,11 @@ function createUnavailableSnapshot(label: string, url?: string): MarketplacePlat
         label,
         availability: "unavailable",
     };
+}
+
+function hasEmptyMarketplaceSnapshot(snapshot: MarketplacePlatformSnapshot): boolean {
+    return snapshot.availability !== "available"
+        || (snapshot.downloads === null && snapshot.versions.length === 0);
 }
 
 function isMinecraftVersion(value: string): boolean {
@@ -172,12 +177,25 @@ async function fetchModrinthStats(
     revalidateSeconds: number
 ): Promise<MarketplacePlatformSnapshot> {
     const getCachedStats = unstable_cache(
-        async (cachedConfig: ModrinthProjectConfig) => fetchModrinthStatsUncached(cachedConfig),
+        async (cachedConfig: ModrinthProjectConfig) => {
+            const stats = await fetchModrinthStatsUncached(cachedConfig);
+
+            if (hasEmptyMarketplaceSnapshot(stats)) {
+                throw new Error(`Modrinth data is unavailable for "${cachedConfig.projectId}".`);
+            }
+
+            return stats;
+        },
         ["minecraft-mod-platform-stats", "modrinth"],
         {revalidate: revalidateSeconds}
     );
 
-    return getCachedStats(config);
+    try {
+        return await getCachedStats(config);
+    } catch {
+        noStore();
+        return fetchModrinthStatsUncached(config);
+    }
 }
 
 async function fetchCurseForgeModBySlug(
@@ -320,6 +338,7 @@ async function fetchCurseForgeStats(
 
     if (!apiKey || apiKey === "your_api_key_here") {
         console.warn("CURSEFORGE_API_KEY is not set. CurseForge marketplace stats will be unavailable.");
+        noStore();
 
         return {
             downloads: null,
@@ -331,12 +350,25 @@ async function fetchCurseForgeStats(
     }
 
     const getCachedStats = unstable_cache(
-        async (cachedConfig: CurseForgeProjectConfig, cachedApiKey: string) => fetchCurseForgeStatsUncached(cachedConfig, cachedApiKey),
+        async (cachedConfig: CurseForgeProjectConfig, cachedApiKey: string) => {
+            const stats = await fetchCurseForgeStatsUncached(cachedConfig, cachedApiKey);
+
+            if (hasEmptyMarketplaceSnapshot(stats)) {
+                throw new Error(`CurseForge data is unavailable for "${cachedConfig.slug ?? cachedConfig.projectId ?? "unknown"}".`);
+            }
+
+            return stats;
+        },
         ["minecraft-mod-platform-stats", "curseforge"],
         {revalidate: revalidateSeconds}
     );
 
-    return getCachedStats(config, apiKey);
+    try {
+        return await getCachedStats(config, apiKey);
+    } catch {
+        noStore();
+        return fetchCurseForgeStatsUncached(config, apiKey);
+    }
 }
 
 export async function getMinecraftModPlatformStats({
@@ -356,6 +388,11 @@ export async function getMinecraftModPlatformStats({
 
     const availableDownloads = [modrinthStats.downloads, curseForgeStats.downloads]
         .filter((value): value is number => typeof value === "number");
+
+    if ((modrinth && hasEmptyMarketplaceSnapshot(modrinthStats))
+        || (curseForge && hasEmptyMarketplaceSnapshot(curseForgeStats))) {
+        noStore();
+    }
 
     return {
         totalDownloads: availableDownloads.length > 0

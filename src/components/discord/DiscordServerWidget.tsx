@@ -2,7 +2,7 @@ import "server-only";
 
 import Image from "next/image";
 import Link from "next/link";
-import {unstable_cache} from "next/cache";
+import {unstable_cache, unstable_noStore as noStore} from "next/cache";
 import {REST} from "@discordjs/rest";
 import {ChannelType, OverwriteType, PermissionFlagsBits, Routes} from "discord-api-types/v10";
 import {Button} from "@/shadcn/components/ui/button";
@@ -294,19 +294,45 @@ async function fetchDiscordServerData(guildId: string): Promise<DiscordServerDat
 }
 
 function getCachedDiscordWidgetData(guildId: string, revalidateSeconds: number): Promise<DiscordWidgetData | null> {
-    return unstable_cache(
-        async () => fetchDiscordWidgetData(guildId, revalidateSeconds),
+    const getCachedData = unstable_cache(
+        async () => {
+            const data = await fetchDiscordWidgetData(guildId, revalidateSeconds);
+
+            if (!data) {
+                throw new Error(`Discord widget data is unavailable for guild "${guildId}".`);
+            }
+
+            return data;
+        },
         [`discord-widget-data:${guildId}`],
         {revalidate: revalidateSeconds},
-    )();
+    );
+
+    return getCachedData().catch(async () => {
+        noStore();
+        return fetchDiscordWidgetData(guildId, revalidateSeconds);
+    });
 }
 
 function getCachedDiscordServerData(guildId: string, revalidateSeconds: number): Promise<DiscordServerData | null> {
-    return unstable_cache(
-        async () => fetchDiscordServerData(guildId),
+    const getCachedData = unstable_cache(
+        async () => {
+            const data = await fetchDiscordServerData(guildId);
+
+            if (!data) {
+                throw new Error(`Discord server data is unavailable for guild "${guildId}".`);
+            }
+
+            return data;
+        },
         [`discord-server-data:${guildId}`],
         {revalidate: revalidateSeconds},
-    )();
+    );
+
+    return getCachedData().catch(async () => {
+        noStore();
+        return fetchDiscordServerData(guildId);
+    });
 }
 
 function renderChannel(channel: PublicChannelEntry) {
@@ -343,6 +369,10 @@ export default async function DiscordServerWidget({
     const groups = serverData?.groups ?? [];
     const ungroupedChannels = serverData?.ungroupedChannels ?? [];
     const hasPublicChannels = groups.length > 0 || ungroupedChannels.length > 0;
+
+    if (!widgetData || !serverData) {
+        noStore();
+    }
 
     return (
         <section className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">

@@ -1,6 +1,7 @@
 import type {Metadata} from "next";
 import Image from "next/image";
 import Link from "next/link";
+import {unstable_noStore as noStore} from "next/cache";
 import {Button} from "@/shadcn/components/ui/button";
 import SimpleBrandIcon from "@/components/SimpleBrandIcon";
 import {CONTACT_YOUTUBE_URL} from "@/lib/contact";
@@ -172,6 +173,7 @@ async function fetchYouTubeSubscriberCount(): Promise<string | null> {
     const apiKey = process.env.YOUTUBE_API_KEY;
 
     if (!apiKey) {
+        noStore();
         return null;
     }
 
@@ -184,6 +186,7 @@ async function fetchYouTubeSubscriberCount(): Promise<string | null> {
         );
 
         if (!response.ok) {
+            noStore();
             return null;
         }
 
@@ -198,14 +201,19 @@ async function fetchYouTubeSubscriberCount(): Promise<string | null> {
 
         const statistics = data.items?.[0]?.statistics;
         if (!statistics || statistics.hiddenSubscriberCount || !statistics.subscriberCount) {
+            noStore();
             return null;
         }
 
         const count = Number(statistics.subscriberCount);
-        if (Number.isNaN(count)) return null;
+        if (Number.isNaN(count)) {
+            noStore();
+            return null;
+        }
 
         return `${new Intl.NumberFormat("en-GB").format(count)} subscribers`;
     } catch {
+        noStore();
         return null;
     }
 }

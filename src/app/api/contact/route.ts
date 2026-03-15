@@ -3,9 +3,6 @@ import {Resend} from "resend";
 import ContactFormEmail from "@/emails/ContactFormEmail";
 import {CONTACT_EMAIL_ADDRESS} from "@/lib/contact";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-const CONTACT_FROM_EMAIL = process.env.RESEND_FROM_EMAIL;
-
 type ContactPayload = {
     name?: string;
     email?: string;
@@ -23,14 +20,17 @@ function isValidEmail(value: string): boolean {
 }
 
 export async function POST(request: Request) {
-    if (!process.env.RESEND_API_KEY) {
+    const resendApiKey = process.env.RESEND_API_KEY;
+    const contactFromEmail = process.env.RESEND_FROM_EMAIL;
+
+    if (!resendApiKey) {
         return NextResponse.json(
             {error: "Server email is not configured."},
             {status: 500},
         );
     }
 
-    if (!CONTACT_FROM_EMAIL) {
+    if (!contactFromEmail) {
         return NextResponse.json(
             {error: "RESEND_FROM_EMAIL is not configured."},
             {status: 500},
@@ -84,8 +84,9 @@ export async function POST(request: Request) {
     ].join("\n");
 
     try {
+        const resend = new Resend(resendApiKey);
         const {data, error} = await resend.emails.send({
-            from: CONTACT_FROM_EMAIL,
+            from: contactFromEmail,
             to: [CONTACT_EMAIL_ADDRESS],
             replyTo: email,
             subject: `[Contact] ${subject}`,
